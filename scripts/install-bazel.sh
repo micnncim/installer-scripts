@@ -17,11 +17,11 @@ else
 fi
 
 mkdir -p ${tmpdir}
-printf "\e[32;1mInstalling installer script...\e[m"
+printf "\e[32;1mInstalling installer script...\n\e[m"
 curl -sSL \
   https://github.com/bazelbuild/bazel/releases/download/${version}/bazel-${version}-installer-${os}-x86_64.sh \
   -o ${tmpdir}/bazel-${version}-installer-${os}-x86_64.sh
 chmod +x ${tmpdir}/bazel-${version}-installer-${os}-x86_64.sh
-printf "\e[32;1mExecuting installer script...\e[m"
+printf "\e[32;1mExecuting installer script...\n\e[m"
 ./${tmpdir}/bazel-${version}-installer-${os}-x86_64.sh
 rm -rf ${tmpdir}
